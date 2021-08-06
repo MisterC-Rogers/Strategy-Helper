@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.css";
+import FromComponent from "./Components/Form";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <div className={styles.container}>
+      <main className={styles.main}>
+        <h1 className={styles.title}>Welcome to The Strategy Helper</h1>
+
+        <p className={styles.description}>
+          Strategy Helper is a light weight web app to help you identify your
+          trading strategy faster and with ease
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {/* this is just a test for the dropdown to render and see */}
+        <FromComponent />
+      </main>
+
+      <footer className={styles.footer}>
+        <p>Powered by: Charlie Rogers</p>
+      </footer>
     </div>
   );
 }
