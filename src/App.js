@@ -1,4 +1,5 @@
 import styles from "./App.module.css";
+import Footer from "./Components/Footer";
 import FromComponent from "./Components/Form";
 
 function App() {
@@ -15,9 +16,7 @@ function App() {
         <FromComponent />
       </main>
 
-      <footer className={styles.footer}>
-        <p>Powered by: Charlie Rogers</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

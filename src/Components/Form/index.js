@@ -32,27 +32,33 @@ const FormComponent = () => {
     <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.dropdownContainer}>
         <Dropdown
-          name="Currency Pair"
+          name="CurrencyPair"
           options={currencyPairs}
           handleChange={handleDropdownChange}
         />
         <Dropdown
-          name="Candlestick Pattern"
+          name="CandlestickPattern"
           options={candlestickPatterns}
           handleChange={handleDropdownChange}
         />
       </div>
-      {Object.keys(indicator).map((item) => {
-        return (
-          <Checkbox
-            key={item}
-            name={item}
-            handleChange={handleIndicatorChange}
-            isChecked={indicator[item]}
-          />
-        );
-      })}
-      <button type="submit">Submit</button>
+      <div className={styles.indicatorContainer}>
+        {Object.keys(indicator).map((item) => {
+          return (
+            <Checkbox
+              key={item}
+              name={item}
+              handleChange={handleIndicatorChange}
+              isChecked={indicator[item]}
+            />
+          );
+        })}
+      </div>
+      <div className={styles.formSubmitButtonContainer}>
+        <button className={styles.formButton} type="submit">
+          Submit
+        </button>
+      </div>
     </form>
   );
 };

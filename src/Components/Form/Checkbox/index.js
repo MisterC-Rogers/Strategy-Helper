@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from "./checkbox.module.css";
 
 const Checkbox = ({ name, handleChange, isChecked }) => {
   return (
-    <div>
+    <div className={styles.checkboxContainer}>
       <input
         type="checkbox"
         id={name}
@@ -11,6 +12,7 @@ const Checkbox = ({ name, handleChange, isChecked }) => {
         value={name}
         onChange={handleChange}
         checked={isChecked}
+        className={styles.checkbox}
       />
       <label htmlFor={name}> {name} Indicator </label>
     </div>
