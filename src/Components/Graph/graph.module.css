@@ -1,0 +1,10 @@
+.chartContainer {
+  height: 500px;
+  width: 500px;
+  overflow: auto;
+  position: relative;
+}
+.SVG {
+  height: 500px;
+  width: 500px;
+}

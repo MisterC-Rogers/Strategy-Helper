@@ -1,13 +1,14 @@
 import styles from "./App.module.css";
 import Footer from "./Components/Footer";
 import FromComponent from "./Components/Form";
+import Chart from "./Components/Graph/Chart";
 
 function App() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
         <h1 className={styles.title}>Welcome to The Strategy Helper</h1>
-
+        <Chart />
         <p className={styles.description}>
           Strategy Helper is a light weight web app to help you identify your
           trading strategy faster and with ease
